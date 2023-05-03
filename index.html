@@ -7,13 +7,14 @@
   </head>
   <body>
     <h1>Toast Notification App By Ansh Oberoi</h1>
-    <div class="buttons">
-      <button onclick="showToast(section)">Success</button>
-      <button onclick="showToast(team_member)">Error</button>
-      <button onclick="showToast(project)">Submit</button>
+    <div class="screen">
+      <div class="buttons">
+        <button class="eye" onclick="showToast(section)">Success</button>
+        <button class="nose" onclick="showToast(team_member)">Error</button>
+        <button class="tongue" onclick="showToast(project)">Submit</button>
+      </div>
+      <div id="toastBox"></div>
     </div>
-
-    <div id="toastBox"></div>
     <script src="script.js"></script>
   </body>
 </html>

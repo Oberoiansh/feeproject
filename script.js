@@ -1,10 +1,10 @@
 let toastBox = document.getElementById("toastBox");
 let section =
-  'Successful';
+  'You Are Touching My Eyes 😊';
 let team_member =
-  'Error';
+  'You Are Touching My Nose 😒';
 let project =
-  'Submit';
+  'You Are Touching My Tongue 😝';
 
 function showToast(msg) {
   let toast = document.createElement("div");

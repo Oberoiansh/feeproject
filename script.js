@@ -1,23 +1,14 @@
-let toastBox = document.getElementById("toastBox");
-let section =
-  'Successful';
-let team_member =
-  'Error';
-let project =
-  'Submit';
+let toastBox = document.querySelector(".toast");
 
-function showToast(msg) {
-  let toast = document.createElement("div");
-  toast.classList.add("toast");
-  toast.innerHTML = msg;
+let msg=["hi","hello","hola"]
+
+function append1() {
+  let toast = document.createElement("a");
+  let a=Math.floor(Math.random() * 3)
+  toast.href=msg[a]
+  toast.innerHTML = msg[a];
+  toast.classList.add("notification");
   toastBox.appendChild(toast);
-
-  if (msg.includes("Aman")) {
-    toast.classList.add("team");
-  }
-  if (msg.includes("toast")) {
-    toast.classList.add("project");
-  }
 
   setTimeout(() => {
     toast.remove();

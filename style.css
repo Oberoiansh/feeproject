@@ -28,10 +28,11 @@ body{
   justify-content: center;
   border-radius: 20px;
   background-color: aqua;
+  flex-direction: column;
 }
 
 .box button{
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 

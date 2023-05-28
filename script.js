@@ -1,17 +1,28 @@
-let toastBox = document.querySelector(".toast");
+let toastBox = document.getElementById("toastBox");
+let section =
+  'You Are Touching My Eyes 😊';
+let team_member =
+  'You Are Touching My Nose 😒';
+let project =
+  'You Are Touching My Tongue 😝';
+let bell='You Are Touching My Bell 😍'
+let belt="You Are Touching My Belt 😁"
+let face="You Are Touching My Face 😂"
 
-let msg=["https://youtu.be/51VupvTTSno","https://youtu.be/ewwxbpJecx4","https://youtu.be/pSK7eNh1r9E","https://youtu.be/r0PhmnYo-us","https://youtu.be/BLUh8QCLoSU","https://youtu.be/nAIFCWMhC_0","https://youtu.be/UeTDUClwXsE"]
-
-function append1() {
-  let toast = document.createElement("a");
-  let a=Math.floor(Math.random() * msg.length)
-  toast.href=msg[a]
-  toast.target="_blank"
-  toast.innerHTML = "notification: click here";
-  toast.classList.add("notification");
+function showToast(msg) {
+  let toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.innerHTML = msg;
   toastBox.appendChild(toast);
 
-  setTimeout(function(){
+  if (msg.includes("Aman")) {
+    toast.classList.add("team");
+  }
+  if (msg.includes("toast")) {
+    toast.classList.add("project");
+  }
+
+  setTimeout(() => {
     toast.remove();
-  }, 10000);
+  }, 5000);
 }
